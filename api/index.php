@@ -14,4 +14,13 @@ foreach ($dirs as $dir) {
     }
 }
 
-require __DIR__ . '/../public/index.php';
+// Tangkap error asli dari Laravel
+try {
+    require __DIR__ . '/../public/index.php';
+} catch (\Throwable $e) {
+    echo "<pre>";
+    echo "ERROR: " . $e->getMessage() . "\n\n";
+    echo "FILE: " . $e->getFile() . ":" . $e->getLine() . "\n\n";
+    echo $e->getTraceAsString();
+    echo "</pre>";
+}
