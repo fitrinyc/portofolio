@@ -30,7 +30,8 @@
         "CACHE_DRIVER": "array",
         "SESSION_DRIVER": "cookie",
         "QUEUE_CONNECTION": "sync",
-        "VIEW_COMPILED_PATH": "/tmp",
+        "VIEW_COMPILED_PATH": "/tmp/views",
+        "APP_STORAGE": "/tmp/storage",
         "LOG_CHANNEL": "stderr"
     }
 }
